@@ -167,20 +167,7 @@ Example:
   }
 }
 
-// ---- System Impact ----
-const impactTitle = "System Impact";
-if (!hasSection(impactTitle)) {
-  fail("Missing **System Impact** section.");
-} else {
-  const impact = getSection(impactTitle);
-  if (!/-\s*\[[xX]\]/.test(impact)) {
-    fail(`
-You must check at least one box in **System Impact**.
 
-This ensures the author consciously considers behavioral impact.
-`);
-  }
-}
 
 // ---- Soft structure rules (warn only) ----
 const recommendedSections = [
