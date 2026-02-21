@@ -9,3 +9,13 @@ license = "MIT OR Apache-2.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+hex = "0.4.3"
+pretty_assertions = "1.4.1"
+proptest = "1.10.0"
+rstest = "0.26.1"
+similar-asserts = "1.7.0"
+virt = "0.4.3"
+color-eyre = "0.6"
+insta = "1.46.3"
+
+
