@@ -1,12 +1,60 @@
-<!-- Please explain the changes you made -->
+## Summary
+What does this change do in one or two sentences?
 
-<!--
-Please, make sure:
-- you have read the contributing guidelines:
-  https://github.com/lucassimpson0213/libvirt-cli/blob/main/docs/CONTRIBUTING.md
-- you have formatted the code using rustfmt:
-  https://github.com/rust-lang/rustfmt
-- you have checked that all tests pass, by running `cargo test --workspace`
-- you have updated the changelog (if needed):
-  https://github.com/lucassimpson0213/libvirt-cli/blob/main/CHANGELOG.md
--->
+---
+
+## Motivation
+Why is this change necessary?
+
+What problem exists right now?
+What behavior was incorrect, missing, or confusing?
+
+(Think: why did I sit down to write this?)
+
+---
+
+## Implementation
+How does this solve the problem?
+
+Key details:
+- major decisions
+- important tradeoffs
+- non-obvious behavior
+- anything reviewers should pay attention to
+
+---
+
+## Issue
+Closes #
+
+(Required — PRs must be tied to tracked work)
+
+---
+
+## Type of change
+- [ ] feat (new behavior)
+- [ ] fix (bug fix)
+- [ ] refactor (no behavior change)
+- [ ] perf (performance)
+- [ ] docs
+- [ ] ci/build
+
+---
+
+## Testing
+How was this tested?
+
+- [ ] builds locally
+- [ ] boots in QEMU
+- [ ] manual testing
+- [ ] new tests added
+
+Explain anything special needed to verify the change.
+
+---
+
+## Checklist
+- [ ] I rebased onto the latest `dev`
+- [ ] CI passes
+- [ ] No debug prints / temporary code left
+- [ ] I updated docs if needed
