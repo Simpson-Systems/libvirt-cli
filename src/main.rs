@@ -13,7 +13,7 @@ pub fn connect_to_virt() {
         assert_eq!(Ok(0), conn.close());
     }
 }
-
+#[cfg(test)]
 pub mod testing {
     use crate::connect_to_virt;
     #[test]
