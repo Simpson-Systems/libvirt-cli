@@ -38,15 +38,41 @@ Every change must be tied to tracked work.
 // -------------------------------
 //
 
-if (!/\d+/.test(branch)) {
-  fail(`
+// -------------------------------
+// 2) BRANCH MUST CONTAIN ISSUE NUMBER
+// -------------------------------
+
+const branch =
+  danger.github?.pr?.head?.ref ??
+  (danger as any).github?.thisPR?.head?.ref ??
+  "";
+
+const actor = pr.user?.login ?? "";
+const isBot = pr.user?.type === "Bot" || /bot/i.test(actor);
+
+// allow merge PRs / automation PRs to bypass if you want
+const isMergePR =
+  /^Merge\b/i.test(pr.title) || /dev\s*->\s*stable/i.test(pr.title);
+
+const branchIssueRegex =
+  /^(feat|fix|docs|refactor|test|chore|build|ci|perf)\/\d+([-/].+)?$/i;
+
+if (!isBot && !isMergePR) {
+  if (!branch) {
+    warn("Could not determine PR branch name in Danger context. Skipping branch naming rule.");
+  } else if (!branchIssueRegex.test(branch)) {
+    fail(`
 ❌ Branch name must include the issue number.
 
+Required format:
+  type/123-description
+
 Examples:
-feat/123-paging
-fix/88-memory-leak
-refactor/52-allocator
+  feat/123-paging
+  fix/88-memory-leak
+  refactor/52-allocator
 `);
+  }
 }
 
 //
