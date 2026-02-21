@@ -26,7 +26,7 @@ pull_request_rules:
       - author!=mergify[bot]
       # --- required checks (MUST match GitHub check names exactly) ---
       - check-success=SonarCloud Code Analysis
-      - check-sucess=required
+      - check-success=required
 
       # Kernel CI is usually "kernel-ci / <job name>" for GitHub Actions.
       # Use a regex so you don't care what the job is called.
