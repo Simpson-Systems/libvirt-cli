@@ -1,4 +1,4 @@
-import { danger, fail, warn, message } from "danger";
+ import { danger, fail, warn, message } from "danger";
 
 const pr = danger.github.pr;
 const body = pr.body ?? "";
