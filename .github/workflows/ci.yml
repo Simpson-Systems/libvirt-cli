@@ -2,8 +2,7 @@ name: CI # Continuous Integration
 
 on:
   push:
-    branches:
-      - main
+    branches:  ["**"]
   pull_request:
 
 jobs:
