@@ -10,6 +10,9 @@ https://192.168.12.152:9090/system
 ## Service
 libvirtd
 
+## Shell Tool first investigation
+- vm-create.sh
+
 ## Installation
 
 ### Cargo
@@ -17,6 +20,8 @@ libvirtd
 * Install the rust toolchain in order to have cargo installed by following
   [this](https://www.rust-lang.org/tools/install) guide.
 * run `cargo install libvirt-cli`
+
+
 
 ## License
 
