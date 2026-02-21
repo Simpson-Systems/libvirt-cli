@@ -1,60 +1,110 @@
-## Summary
-What does this change do in one or two sentences?
+# Pull Request
 
----
+## Linked Issue
 
-## Motivation
-Why is this change necessary?
-
-What problem exists right now?
-What behavior was incorrect, missing, or confusing?
-
-(Think: why did I sit down to write this?)
-
----
-
-## Implementation
-How does this solve the problem?
-
-Key details:
-- major decisions
-- important tradeoffs
-- non-obvious behavior
-- anything reviewers should pay attention to
-
----
-
-## Issue
 Closes #
 
-(Required — PRs must be tied to tracked work)
+(Every PR must be tied to an issue. If there is no issue, create one first.)
 
 ---
 
-## Type of change
-- [ ] feat (new behavior)
-- [ ] fix (bug fix)
-- [ ] refactor (no behavior change)
-- [ ] perf (performance)
-- [ ] docs
-- [ ] ci/build
+## What does this change do?
+
+Describe the change in plain English.
+
+What new behavior exists after this PR that did not exist before?
 
 ---
 
-## Testing
-How was this tested?
+## Why is this change needed?
 
-- [ ] builds locally
-- [ ] boots in QEMU
-- [ ] manual testing
-- [ ] new tests added
+Explain the problem being solved.
 
-Explain anything special needed to verify the change.
+* Bug?
+* New feature?
+* Refactor?
+* Infrastructure change?
+
+---
+
+## How was this tested?
+
+Describe **how you verified it works locally**.
+
+Examples:
+
+* ran LocalStack and invoked endpoint
+* uploaded S3 file
+* triggered SQS message
+* executed Step Function
+* booted kernel in QEMU
+* started VM through libvirt
+
+Be specific so a reviewer can reproduce it.
+
+---
+
+## System Impact
+
+What parts of the system behavior are affected?
+
+* [ ] API behavior
+* [ ] Event flow
+* [ ] Data model / database
+* [ ] Retry behavior
+* [ ] Idempotency
+* [ ] Failure handling
+* [ ] Infrastructure (CDK / deployment)
+* [ ] Performance
+* [ ] Logging / observability
+
+---
+
+## How can a reviewer verify?
+
+Steps to reproduce locally:
+
+1.
+2.
+3.
+
+Expected result:
+
+---
+
+## Breaking Changes
+
+* [ ] No
+* [ ] Yes (explain below)
+
+If yes, describe what breaks and how to migrate.
+
+---
+
+## Risks
+
+What could go wrong?
+
+Examples:
+
+* duplicate processing
+* race conditions
+* ordering issues
+* retries creating side effects
+* data corruption
+
+---
+
+## Additional Notes
+
+Anything else a reviewer should know.
 
 ---
 
 ## Checklist
-- [ ] I rebased onto the latest `dev`
-- [ ] CI passes
-- [ ] No debug prints / temporary code left
-- [ ] I updated docs if needed
+
+* [ ] Linked to an issue
+* [ ] Runs locally
+* [ ] CI passes
+* [ ] Added/updated tests if applicable
+* [ ] Updated documentation if behavior changed
