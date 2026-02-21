@@ -46,7 +46,7 @@ checksum = "bb531853791a215d7c62a30daf0dde835f381ab5de4589cfe7c649d2cbe92bd6"
 dependencies = [
  "addr2line",
  "cfg-if",
- "libc",
+ "libc 0.2.182",
  "miniz_oxide",
  "object",
  "rustc-demangle",
@@ -131,7 +131,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "054ccb5b10f9f2cbf51eb355ca1d05c2d279ce1804688d0db74b4733a5aeafd8"
 dependencies = [
  "encode_unicode",
- "libc",
+ "libc 0.2.182",
  "once_cell",
  "windows-sys 0.59.0",
 ]
@@ -160,7 +160,7 @@ version = "0.3.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "39cab71617ae0d63f51a36d69f866391735b51691dbda63cf6f96d042b63efeb"
 dependencies = [
- "libc",
+ "libc 0.2.182",
  "windows-sys 0.61.2",
 ]
 
@@ -241,7 +241,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "899def5c37c4fd7b2664648c28120ecec138e4d395b459e5ca34f9cce2dd77fd"
 dependencies = [
  "cfg-if",
- "libc",
+ "libc 0.2.182",
  "r-efi",
  "wasip2",
 ]
@@ -253,7 +253,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "139ef39800118c7683f2fd3c98c1b23c09ae076556b435f8e9064ae108aaeeec"
 dependencies = [
  "cfg-if",
- "libc",
+ "libc 0.2.182",
  "r-efi",
  "wasip2",
  "wasip3",
@@ -364,9 +364,25 @@ checksum = "09edd9e8b54e49e587e4f6295a7d29c3ea94d469cb40ab8ca70b288248a81db2"
 
 [[package]]
 name = "libc"
+version = "0.1.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e32a70cf75e5846d53a673923498228bbec6a8624708a9ea5645f075d6276122"
+
+[[package]]
+name = "libc"
 version = "0.2.182"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6800badb6cb2082ffd7b6a67e6125bb39f18782f793520caee8cb8846be06112"
+
+[[package]]
+name = "libvirt"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a70629b79a51ea935e7f1273911bbe685c3157074b78c01599144eae0a94332b"
+dependencies = [
+ "libc 0.1.12",
+ "libvirt-sys",
+]
 
 [[package]]
 name = "libvirt-cli"
@@ -375,11 +391,21 @@ dependencies = [
  "color-eyre",
  "hex",
  "insta",
+ "libvirt",
  "pretty_assertions",
  "proptest",
  "rstest",
  "similar-asserts",
  "virt",
+]
+
+[[package]]
+name = "libvirt-sys"
+version = "1.2.18"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "83c6e74fe8d35394aa0075628b8a7f2926e823528450e7d82f73303e7f5ad3eb"
+dependencies = [
+ "libc 0.1.12",
 ]
 
 [[package]]
@@ -663,7 +689,7 @@ checksum = "146c9e247ccc180c1f61615433868c99f3de3ae256a30a43b49f67c2d9171f34"
 dependencies = [
  "bitflags",
  "errno",
- "libc",
+ "libc 0.2.182",
  "linux-raw-sys",
  "windows-sys 0.61.2",
 ]
@@ -919,7 +945,7 @@ version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b191deb9f351999588bbd289fd40d5ca0076fd9784d1a1a0af531ec8684093c9"
 dependencies = [
- "libc",
+ "libc 0.2.182",
  "uuid",
  "virt-sys",
 ]
@@ -930,7 +956,7 @@ version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8762dc8eb11b230e7ed6c94152910f8382a128eed861af21047a203e3e2ebb00"
 dependencies = [
- "libc",
+ "libc 0.2.182",
  "pkg-config",
 ]
 
@@ -940,7 +966,7 @@ version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "09ac3b126d3914f9849036f826e054cbabdc8519970b8998ddaf3b5bd3c65f11"
 dependencies = [
- "libc",
+ "libc 0.2.182",
 ]
 
 [[package]]
