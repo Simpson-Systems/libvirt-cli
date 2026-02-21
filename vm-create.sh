@@ -26,7 +26,7 @@ base_install() {
     --vcpus 2 \
     --disk $disk_path \
     --import \
-    --os-variant ubuntu22.04
+    --os-variant ubuntu22.04 \
 }
 
 if [[ -f '/home/lucas/home/images/base_ubuntu.qcow2' ]]; then
