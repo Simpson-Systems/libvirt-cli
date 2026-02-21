@@ -15,9 +15,9 @@ pub fn connect_to_virt() {
 }
 
 pub mod testing {
-
+    use crate::connect_to_virt;
     #[test]
     fn name() {
-        crate::connect_to_virt();
+        connect_to_virt();
     }
 }
