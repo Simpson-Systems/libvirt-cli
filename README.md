@@ -4,6 +4,12 @@
 [![Docs.rs](https://docs.rs/libvirt-cli/badge.svg)](https://docs.rs/libvirt-cli)
 [![CI](https://github.com/lucassimpson0213/libvirt-cli/workflows/CI/badge.svg)](https://github.com/lucassimpson0213/libvirt-cli/actions)
 
+## Raspberry pi console
+https://192.168.12.152:9090/system
+
+## Service
+libvirtd
+
 ## Installation
 
 ### Cargo
