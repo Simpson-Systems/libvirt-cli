@@ -18,6 +18,6 @@ pub mod testing {
 
     #[test]
     fn name() {
-        connect_to_virt();
+        crate::connect_to_virt();
     }
 }
