@@ -11,7 +11,7 @@ license = "MIT OR Apache-2.0"
 [dependencies]
 hex = "0.4.3"
 pretty_assertions = "1.4.1"
-proptest = "1.10.0"
+proptest = "1.11.0"
 rstest = "0.26.1"
 similar-asserts = "1.7.0"
 virt = "0.4.3"
